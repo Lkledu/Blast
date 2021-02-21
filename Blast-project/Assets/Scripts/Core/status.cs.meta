@@ -3,7 +3,15 @@ guid: 41e9a7f972706414f82dfac0bfb4c339
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - spawn_position: {instanceID: 0}
+  - rectLife: {instanceID: 0}
+  - deathSendTrigger: {instanceID: 0}
+  - wIcon: {instanceID: 0}
+  - wIconImg: {instanceID: 0}
+  - spriteP: {instanceID: 0}
+  - spriteB: {instanceID: 0}
+  - spriteD: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

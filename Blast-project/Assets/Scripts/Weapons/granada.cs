@@ -19,6 +19,8 @@ public class granada : MonoBehaviour {
         weapon_child = Instantiate(prefab_weapon, gameObject.transform.Find("Weapon"));
         weapon_child.GetComponent<Transform>().localScale = new Vector3(40, 40, 80);
         weapon_child.GetComponent<Transform>().rotation = Quaternion.Euler(-45, 90,0);
+
+        gameObject.GetComponent<status>().wIconImg.color = Color.white;
     }
 
     void Update()
@@ -32,13 +34,13 @@ public class granada : MonoBehaviour {
             projectile_pistol.transform.position = transform.position + transform.forward;
 
             Rigidbody rb = projectile_pistol.GetComponent<Rigidbody>();
-            rb.velocity = transform.forward * velocity;
-            
+            rb.velocity = transform.forward * velocity;   
         }
 
 
         if (maxShoots == 0)
         {
+            gameObject.GetComponent<status>().wIconImg.color = Color.clear;
             Destroy(this);
         }
     }

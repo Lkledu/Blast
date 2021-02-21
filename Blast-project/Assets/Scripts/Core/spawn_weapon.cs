@@ -37,7 +37,7 @@ public class spawn_weapon : MonoBehaviour {
             respawnTime -= Time.deltaTime;
         }
         else {
-            if(objWeapon.active == false) {
+            if(objWeapon.activeSelf == false) {
                 objWeapon.SetActive(true);
                 GetComponent<Collider>().enabled = true;
             }

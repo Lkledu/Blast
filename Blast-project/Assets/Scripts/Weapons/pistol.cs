@@ -27,6 +27,8 @@ public class pistol : MonoBehaviour {
 
         particleVFX = Resources.Load("particle/bangEffect") as GameObject;
 
+        gameObject.GetComponent<status>().wIconImg.color = Color.white;
+
     }
 
     void Update () {
@@ -45,7 +47,9 @@ public class pistol : MonoBehaviour {
             projectile_pistol.GetComponent<pistol_shoot>().shooter = transform;
         }
 
-        if (maxShoots == 0) {
+        if (maxShoots == 0)
+        {
+            gameObject.GetComponent<status>().wIconImg.color = Color.clear;
             Destroy(this);
         }
 	}

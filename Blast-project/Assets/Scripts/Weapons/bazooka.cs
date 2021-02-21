@@ -18,6 +18,8 @@ public class bazooka : MonoBehaviour {
         weapon_child = Instantiate(prefab_weapon, gameObject.transform.Find("Weapon"));
         weapon_child.GetComponent<Transform>().localScale = new Vector3(100, 100, 300);
         weapon_child.GetComponent<Transform>().localRotation = Quaternion.Euler(0,-90,120);
+
+        gameObject.GetComponent<status>().wIconImg.color = Color.white;
     }
 	
 	void Update () {
@@ -37,6 +39,7 @@ public class bazooka : MonoBehaviour {
 
         if (maxShoots == 0)
         {
+            gameObject.GetComponent<status>().wIconImg.color = Color.clear;
             Destroy(this);
         }
     }

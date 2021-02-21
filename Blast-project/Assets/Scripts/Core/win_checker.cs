@@ -33,9 +33,7 @@ public class win_checker : MonoBehaviour {
     }
 
     public void deathTrigger(string playerName, bool triggerReceived) {
-        if (triggerReceived) {
-            trigger = triggerReceived;
-            player = playerName;
-        }
+        trigger = triggerReceived;
+        player = playerName;
     }
 }
